@@ -3,64 +3,92 @@
 #include<iostream>
 using namespace std;
 
-srand(time(NULL));
 class GameController
 {
 	private: 
 		int betMoney;
-		int remainingMoney;
+		int Sum=1000;
 	public:
-		void betMoney(money)
+		int betMoney(int bet);
+		void Draw();
+		int getSum()
 		{
-			if(remainingMoney<money)
-				throw "Insufficient money";
-			else
-				remainingMoney-=money;			
+			return Sum;
 		}
 };
-
+	int betMoney(int bet)
+		{
+			if(Sum<bet)
+				throw "Insufficient money";
+			else
+				Sum-=bet;			
+		}
+	void Draw()
+	{
+	}
 class Player:public GameController
 {
 	private:
-		int Sum;
+		  
 	public:
-		void 
+		
 };
 
 class Computer:public GameController
 {
 	private:
 		int Sum;
+	
+};
+
+class Deck
+{
+	private:
+		DeckSize;
+	protected:
+	
+	public:
+		void Shuffle();
+		void CheckDeck();
+	
+class Card
+{
+	private:
+		Card Deck[52]={
+					   {1,"Clubs"} , {2,"Clubs"} , {3,"Clubs"} , {4,"Clubs",} , {5,"Clubs"} , {6,"Clubs"} , {7,"Clubs"} , {8,"Clubs"} , {9,"Clubs"} , {10,"Clubs"} , {11,"Clubs"} , {12,"Clubs"} , {13,"Clubs"}
+					   {1,"Diamonds"} , {2,"Diamonds"} , {3,"Diamonds"} , {4,"Diamonds"} , {5,"Diamonds"} , {6,"Diamonds"} , {7,"Diamonds"} , {8,"Diamonds"} , {9,"Diamonds"} , {10,"Diamonds"} , {11,"Diamonds"} , {12,"Diamonds"} , {13,"Diamonds"}
+					   {1,"Hearts"} , {2,"Hearts"} , {3,"Hearts"} , {4,"Hearts"} , {5,"Hearts"} , {6,"Hearts"}{7,"Hearts"} , {8,"Hearts"}{9,"Hearts"}{10,"Hearts"} , {11,"Hearts"} , {12,"Hearts"} , {13,"Hearts"}
+					   {1,"Spades"} , {2,"Spades"} , {3,"Spades"} , {4,"Spades"} , {5,"Spades"} , {6,"Spades"} , {7,"Spades"} , {8,"Spades"} , {9,"Spades"} , {10,"Spades"} , {11,"Spades"} , {12,"Spades"} , {13,"Spades"}
+					  };
+	public:
+		Card(int baseValue, std::string Suite)
+		{
+			
+		}
 		
 };
 
-class Deck:public GameController
-{
-	private:
-		int DeckSize=52;
-			
-	public:
-		void CheckDeck()
+};
+    void Deck::Shuffle()
+    {
+    	srand(time(NULL));
+	}
+	void Deck::CheckDeck()
 		{
 			if(DeckSize==0)
 			{
 						
 			}
 		}
-};
 
-class DrawnCard:public Deck
+
+class Shuffle:Deck
 {
-	private:
-		
-	public:
-		DrawnCard(int baseValue, std::string Suite)
-		
-};
-
-
+	Deck
+}
 int main()
 {
+
 	
 	return(0);
 }
