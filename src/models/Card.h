@@ -1,16 +1,18 @@
-#ifndef CARD_H
-#define CARD_H
-#endif
+#ifndef CARD_HEADER
+#define CARD_HEADER
+
+
 class Card
 {
 	private:
 		int baseValue;
 		int suit;
 	public: 
+		Card(int suit, int baseValue);
+		Card();
 		int get_baseValue();
 		int get_suit();
 		enum suit{CLUBS=1,DIAMONDS,HEARTS,SPADES};
-		Card(int suit, int baseValue);
-		Card();
 		static Card *top;
 };	
+#endif
