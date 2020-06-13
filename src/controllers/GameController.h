@@ -1,15 +1,19 @@
-#ifndef GAMECONTROLLER_H
-#define GAMECONTROLLER_H
-#endif
+#ifndef GAMECONTROLLER_HEADER
+#define GAMECONTROLLER_HEADER
+
+
 #include "Player.h"
 #include "Computer.h"
-#include "Deck.h"
+#include "../models/Deck.h"
+
 class GameController
 {
 	public:
 		GameController();
+		~GameController();
 		int start(int option);
 		int deal(Player *p, Computer *c,Deck *d);
 		void shuffle(Deck *d);
 		int wageWinner(Player *p, Computer *c);
 };
+#endif
